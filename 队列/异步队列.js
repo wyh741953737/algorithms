@@ -1,0 +1,1 @@
+// 事件循环和任务队列： event loop 主线程， webAPI：DOM（document）， ajax，setTimeout；  callbackQueue
