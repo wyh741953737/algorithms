@@ -3,7 +3,6 @@
 
 // 思路：如果是奇数，判断左右两边是不是相等的，栈
 
-
 function isPalingrome(x) {
     let str = x.toString();
     let centerIndex;
