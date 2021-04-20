@@ -10,3 +10,16 @@
 //   [1,3,3,1],
 //  [1,4,6,4,1]
 // ]
+// 
+
+function generate(numRows) {
+     const ret = [];
+     for (let i = 0; i < numRows; i++) {
+         const row = new Array(i + 1).fill(1); // 第一轮：[1] 第二轮：[1,1], 第三轮:[1,1,1] 第四轮：[1,1,1,1], 第五轮： [1,1,1,1,1]
+         for (let j = 1; j < row.length - 1; j++) {
+             row[j] = ret[i - 1][j - 1] + ret[i - 1][j];
+         }
+         ret.push(row);
+     }
+     return ret;
+ };
