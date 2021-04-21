@@ -23,3 +23,13 @@ function generate(numRows) {
      }
      return ret;
  };
+
+ function generate(numRows) {
+    for(var i = 0, r = new Array(numRows); i < numRows; i++) {
+        r[i] = i < 10 ? new Uint8Array(i + 1) : i < 19 ? new Uint16Array(i + 1) : new Uint32Array(i + 1)
+        r[i][0] = r[i][i] = 1
+        for (var j = 1; j <= i >> 1; j++) 
+            r[i][j] = r[i][i - j] = r[i - 1][j - 1] + r[i - 1][j]
+    }
+    return r
+};

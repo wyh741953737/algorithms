@@ -16,4 +16,4 @@ function insertSort(arr) {
     return arr;
 }
 const resInsert = insertSort([9,2,0,6,3,4,8])
-console.log(resInsert)
+// console.log(resInsert)
